@@ -42,6 +42,8 @@ modules:
           tag-pattern: ([\d.]+)$
           is-important: true
         commit: c0e6812b1a4260bb25a1f606f70f55f4962bb97d
+      - type: patch
+        path: patches/enable_csm.patch
       - type: script
         dest-filename: luanti.sh
         commands:

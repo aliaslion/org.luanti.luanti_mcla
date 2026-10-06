@@ -1,0 +1,45 @@
+diff --git a/builtin/settingtypes.txt b/builtin/settingtypes.txt
+index 69ed1e85f..a5df1797e 100644
+--- a/builtin/settingtypes.txt
++++ b/builtin/settingtypes.txt
+@@ -1926,9 +1926,9 @@ mgvalleys_np_dungeons (Dungeon noise) noise_params_3d 0.9, 0.5, (500, 500, 500),
+ [*Developer Options]
+ 
+ #    Enable Lua modding support on client.
+ #    This support is experimental and API can change.
+-enable_client_modding (Client modding) [client] bool false
++enable_client_modding (Client modding) [client] bool true
+ 
+ #    Where to enable server-sent client-side modding (SSCSM).
+ #    Warning: Experimental.
+ enable_sscsm (Enable SSCSM) [client] enum nowhere nowhere,singleplayer,localhost,lan,everywhere
+diff --git a/minetest.conf.example b/minetest.conf.example
+index 9e734218c..066699f96 100644
+--- a/minetest.conf.example
++++ b/minetest.conf.example
+@@ -3013,9 +3013,9 @@
+ 
+ #    Enable Lua modding support on client.
+ #    This support is experimental and API can change.
+ #    type: bool
+-# enable_client_modding = false
++# enable_client_modding = true
+ 
+ #    Where to enable server-sent client-side modding (SSCSM).
+ #    Warning: Experimental.
+ #    type: enum values: nowhere, singleplayer, localhost, lan, everywhere
+diff --git a/src/defaultsettings.cpp b/src/defaultsettings.cpp
+index d495beafd..d09e89d74 100644
+--- a/src/defaultsettings.cpp
++++ b/src/defaultsettings.cpp
+@@ -120,9 +120,9 @@ void set_default_settings()
+ 	settings->setDefault("curl_parallel_limit", "8");
+ 	settings->setDefault("curl_file_download_timeout", "300000");
+ 	settings->setDefault("curl_verify_cert", "true");
+ 	settings->setDefault("enable_remote_media_server", "true");
+-	settings->setDefault("enable_client_modding", "false");
++	settings->setDefault("enable_client_modding", "true");
+ 	settings->setDefault("enable_sscsm", "nowhere");
+ 	settings->setDefault("max_out_chat_queue_size", "20");
+ 	settings->setDefault("pause_on_lost_focus", "false");
+ 	settings->setDefault("enable_split_login_register", "true");
