@@ -7,7 +7,6 @@ rename-icon: luanti
 copy-icon: true
 finish-args:
   - --socket=wayland
-  - --socket=fallback-x11
   - --socket=pulseaudio
   - --device=dri
   - --share=ipc
