@@ -21,6 +21,7 @@ cleanup:
   - '*.a'
 
 modules:
+  - mcl_localplayer.yaml
   - libzip.yaml
   - shared-modules/luajit/luajit.json
 

@@ -1,0 +1,9 @@
+name: mcl_localplayer
+buildsystem: simple
+sources:
+  - type: git
+    url: https://codeberg.org/halon/mcl_localplayer.git
+    commit: 1bec7d805d09594c9271da3427683d1a34670a95
+build-commands:
+  - install -d $FLATPAK_DEST/share/luanti/clientmods/mcl_localplayer
+  - cp -a . $FLATPAK_DEST/share/luanti/clientmods/mcl_localplayer
