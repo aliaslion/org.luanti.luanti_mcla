@@ -1,0 +1,6 @@
+name: libzip
+buildsystem: cmake-ninja
+sources:
+  - type: git
+    tag: v1.11.4
+    url: https://github.com/nih-at/libzip.git

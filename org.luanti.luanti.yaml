@@ -21,6 +21,7 @@ cleanup:
   - '*.a'
 
 modules:
+  - libzip.yaml
   - shared-modules/luajit/luajit.json
 
   - name: luanti
@@ -35,13 +36,8 @@ modules:
       - install -Dm755 luanti.sh $FLATPAK_DEST/bin/luanti
     sources:
       - type: git
-        url: https://github.com/luanti-org/luanti.git
-        tag: 5.17.0
-        x-checker-data:
-          type: git
-          tag-pattern: ([\d.]+)$
-          is-important: true
-        commit: c0e6812b1a4260bb25a1f606f70f55f4962bb97d
+        url: https://codeberg.org/halon/Minetest.git
+        commit: a0ed3895e8136a1934f9286fd5b995b71693214e
       - type: patch
         path: patches/enable_csm.patch
       - type: script
